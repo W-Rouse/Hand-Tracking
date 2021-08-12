@@ -21,7 +21,6 @@ minVol = volRange[0]
 maxVol = volRange[1]
 ############################
 
-##PROBLEM: Length is also dependant on distance away from the cam (Maybe normalize the values so its 0-1
 
 
 wCam, hCam = 1280, 720
@@ -73,14 +72,10 @@ while True:
         else:
             colorVol = (255,0,0)
 
-        # Drawings
+       
 
-        # Distance between the two points
-
-        # Hand Range 50-400
-        # Volume Range
-
-
+       
+    # Drawings
     cv2.rectangle(img, (50, 150), (85, 400), (0, 255, 0), 3)
     cv2.rectangle(img, (50, int(volBar)), (85, 400), (0, 255, 0), cv2.FILLED)
     cv2.putText(img, f'{int(volPer)} %', (40, 450), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3)
